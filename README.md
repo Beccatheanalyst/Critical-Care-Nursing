@@ -13,7 +13,6 @@ Critical Care Nursing : Kaggle
 
 - Excel - Data Cleaning and Analysis
 - SQL server - Data analysis
-- Tableau - Creating reports
 
 ### Data Cleaning/Preparation
 
@@ -27,12 +26,10 @@ Critical Care Nursing : Kaggle
 EDA involved exploring Dataset to answer key questions such as; 
 1. What is the total number of RN per state?
 2. What is the number of nursing schools by state?
-3. What is the percentage of CCRN by state?
-4. What is the percentage of total RNs with each type of critical care certification by state?
-5. What is the ratio of hospitals to Nursing schools?
-6. What is the ratio of Nursing schools in relation to RNs?
-7. What is the ratio of Nursing schools relative to Hospitals?
-8. What is the ratio of Hospitals to RNs?  
+3. What is the percentage of total RNs with each type of critical care certification by state?
+4. What is the ratio of Nursing schools in relation to RNs?
+5. What is the ratio of Nursing schools relative to Hospitals?
+
 
 ### Data Analysis 
 ```sql
@@ -76,11 +73,6 @@ SELECT State,
 (PCCN/Total_rn) *100 AS Percentagepccn
 FROM criticalnursingeda
 
------------- The ratio of total hospitals to nursing school
-SELECT State, (Total_Hospitals/Nursing_schools) AS Ratio_hospital_to_nursing
-FROM criticalnursingeda
-ORDER BY 1,2
-
 ------- Nursing schools relative to total RNs
 SELECT State, (Nursing_schools / Total_rn) AS School_Ratio
 FROM criticalnursingeda
@@ -99,14 +91,15 @@ ORDER BY Hospital_RN_ratio DESC;
 
 ### Results/Finding
 
-1. The "Old" category experiences higher quality of sleep.
-2. The "Overweight" category exhibits the highest physical activity level.
-3. The "Adult" category demonstrates the highest stress level.
-4. Engineers show the lowest stress level.
-5. Nurses record the highest number of daily steps.
+1. California boasts the highest count of registered nurses.
+2. New Jersey exhibits the highest proportion of CCRN certifications.
+3. North Dakota displays the most favorable ratio of nursing schools to hospitals.
+4. Oklahoma demonstrates the highest hospital-to-RN ratio among states.
 
 ### Recommendations 
 
 Based on the analysis, The following actions can be recommended:
-1. Individuals with sleep disorders should consider consulting neurologists, pulmonologists, or psychiatrists for specialized care.
-2. Efforts to improve quality of s
+1. Encourage other states to emulate California's approach to nursing staffing.
+2. Investigate the factors contributing to New Jersey's high CCRN certification rate for potential replication in other regions.
+3. Assess the effectiveness of nursing school distribution and consider adjustments to achieve a balanced ratio similar to North Dakota's.
+4. Evaluate the reasons behind Oklahoma's high hospital-to-RN ratio and explore strategies to optimize staffing levels for better patient care.
